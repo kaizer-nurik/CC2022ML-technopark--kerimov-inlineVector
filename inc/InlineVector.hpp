@@ -161,7 +161,7 @@ public:
       else
         {
           // перестановка в другом случае
-          for (size_t i = ind; i < data_length - 2; i++)
+          for (size_t i = ind; i < data_length - 1; i++)
             {
               set (i, get (i + 1));
             }
