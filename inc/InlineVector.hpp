@@ -143,7 +143,7 @@ public:
         {
           // перестановка в другом случае
           data_length++;
-          for (size_t i = (data_length - 1); i >= ind; i--)
+          for (size_t i = (data_length - 2); i >= ind; i--)
             {
               set (i + 1, get (i));
             }
