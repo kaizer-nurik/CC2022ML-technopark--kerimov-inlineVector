@@ -1,10 +1,10 @@
-CC=g++-11
+CC=g++
 INCLUDE=inc/
 EXE=exe/
 TMP=tmp/
 UNIT=test/unit/
 INTEGR=test/integr/
-FLAGS=-std=c++23 -I ${INCLUDE} -Wall -Wextra -pedantic -g
+FLAGS=-std=c++2a -I ${INCLUDE} -Wall -Wextra -pedantic -g
 SANITIZER=-fsanitize=address,undefined,signed-integer-overflow,pointer-compare,pointer-subtract,leak,bounds,pointer-overflow
 TEST_LIBS=-lgtest_main -lgtest -lpthread
 DEPS=${INCLUDE}*

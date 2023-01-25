@@ -477,7 +477,7 @@ void
 InlineVector<T, N>::reserve (size_t new_size)
 {
   _st.reserve (new_size);
-};
+}
 
 template <typename T, size_t N>
 void
