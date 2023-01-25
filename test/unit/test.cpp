@@ -226,6 +226,26 @@ TEST_F (TestVec, clear)
   ASSERT_EQ (test_vec.len (), 0);
 }
 
+TEST_F (TestVec, del)
+{
+  InlineVector<int, 2> test_vec;
+  for (int i = 1; i < 10; ++i)
+    test_vec.push_back (i);
+
+  for (int i = 0; i < 9; ++i)
+    ASSERT_EQ (test_vec[i], i + 1);
+
+  test_vec.erase (test_vec.begin () + 5);
+  ASSERT_EQ (test_vec[0], 1);
+  ASSERT_EQ (test_vec[1], 2);
+  ASSERT_EQ (test_vec[2], 3);
+  ASSERT_EQ (test_vec[3], 4);
+  ASSERT_EQ (test_vec[4], 5);
+  ASSERT_EQ (test_vec[5], 7);
+  ASSERT_EQ (test_vec[6], 8);
+  ASSERT_EQ (test_vec[7], 9);
+}
+
 int
 main (int argc, char *argv[])
 {

@@ -143,7 +143,7 @@ public:
         {
           // перестановка в другом случае
           data_length++;
-          for (size_t i = (data_length - 1); i >= ind; i--)
+          for (size_t i = (data_length - 2); i >= ind; i--)
             {
               set (i + 1, get (i));
             }
@@ -161,7 +161,7 @@ public:
       else
         {
           // перестановка в другом случае
-          for (size_t i = ind; i < data_length - 2; i++)
+          for (size_t i = ind; i < data_length - 1; i++)
             {
               set (i, get (i + 1));
             }
@@ -477,7 +477,7 @@ void
 InlineVector<T, N>::reserve (size_t new_size)
 {
   _st.reserve (new_size);
-};
+}
 
 template <typename T, size_t N>
 void
