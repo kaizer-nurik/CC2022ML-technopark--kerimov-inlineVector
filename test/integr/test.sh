@@ -46,7 +46,14 @@ else
     echo "${RED}[  FAILED  ]${NC} test ${TEST_N}"
 fi
 
-
+TEST_N=$((${TEST_N} + 1))
+echo "${GREEN}[ RUN      ]${NC} test ${TEST_N}"
+if echo "5 a 1 a 2 a 3 i 20 2 p" | ./tmp/demo 2>${NULL} 1>${NULL} == "1 2 20 3 "  ; then
+    echo "${GREEN}[       OK ]${NC} test ${TEST_N}"
+    PASSED=$((${PASSED} + 1))
+else
+    echo "${RED}[  FAILED  ]${NC} test ${TEST_N}"
+fi
 
 echo "${GREEN}[==========]${NC}"
 if [ ${PASSED} -ne 0 ] ; then
